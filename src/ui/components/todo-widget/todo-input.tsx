@@ -18,7 +18,7 @@ export function TodoInput() {
     }
 
     return (
-        <div className="join w-full">
+        <div className="join w-full pt-3">
 
             <input value={ todoText }
                    onInput={ onTodoTextInput }

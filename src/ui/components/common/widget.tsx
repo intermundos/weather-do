@@ -10,17 +10,18 @@ export interface Props {
 export function Widget( { children, title, loading }: Props ) {
 
     return (
-        <article className="card card-compact bg-base-100 shadow-xl w-full">
-
+        <article className="card card-compact bg-base-100 rounded shadow-md w-full border">
 
             <div className="card-body">
-                <h2 className="card-title">{ title }</h2>
+
+                <h2 className="card-title text-lg">{ title }</h2>
+
                 <div className="card-content relative">
                     { loading && <LoadingIndicator/> }
                     { children }
                 </div>
-            </div>
 
+            </div>
 
         </article>
     )

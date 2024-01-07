@@ -7,7 +7,7 @@ export function TodoListToolbar() {
 
     return (
         <>
-            <div className="divider divider-neutral divider-start mt-7">
+            <div className="divider divider-primary divider-start mt-7">
                 {
                     Object.keys( store ).length > 0 && (
                         <div className="flex gap-2">

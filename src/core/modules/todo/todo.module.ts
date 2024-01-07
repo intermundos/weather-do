@@ -29,7 +29,7 @@ function toggleTodo( todoId: TTodo['id'] ) {
     store.set( { ...todos, [ todoId ]: todo } )
 }
 
-function deleteTodo( todoId: string ) {
+function deleteTodo( todoId: TTodo['id'] ) {
 
     const todos = store.get()
 
@@ -39,6 +39,7 @@ function deleteTodo( todoId: string ) {
 }
 
 function cleanCompleted() {
+
     const todos = store.get()
 
     for ( const todoId in todos ) {
@@ -51,6 +52,7 @@ function cleanCompleted() {
 }
 
 function completeAll() {
+
     const todos = store.get()
 
     for ( const todoId in todos ) {
@@ -62,11 +64,6 @@ function completeAll() {
     store.set( { ...todos } )
 }
 
-function hasTodos() {
-    console.log( 'hasTodos' )
-    return Object.keys( store.get() ).length > 0
-}
-
 export const TodoModule = {
     store,
     addTodo,
@@ -74,8 +71,4 @@ export const TodoModule = {
     deleteTodo,
     cleanCompleted,
     completeAll,
-    // getters
-    getters: {
-        hasTodos,
-    }
 }
