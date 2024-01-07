@@ -26,10 +26,10 @@ async function getCurrentGeoPosition() {
         )
 
     } else {
+        store.setKey( 'loading', false )
+        store.setKey( 'error', true )
         console.log( 'Geolocation is not supported by your browser' )
     }
-
-
 }
 
 export const WeatherModule = {
