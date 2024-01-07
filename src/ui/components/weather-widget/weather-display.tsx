@@ -4,15 +4,15 @@ import { WeatherModule } from '@/core/modules/weather/weather.module.ts'
 export function WeatherDisplay() {
 
     const store = useStore( WeatherModule.store )
-
+    
     return (
         <div className="weather-display w-full">
 
             <h2 className="text-center text-xl font-light mb-2">My location</h2>
 
             <div className="location flex gap-3 justify-center mb-6">
-                <div>Latitude: <b>{ store.position?.coords.latitude }</b></div>
-                <div>Longitude: <b>{ store.position?.coords.longitude }</b></div>
+                <div>City: <b>{ store?.location ? store.location.city : 'N/A' }</b></div>
+                <div>Country: <b>{ store.location ? store.location.country : 'N/A' }</b></div>
             </div>
 
             <div className="weather-icon flex justify-center gap-1">

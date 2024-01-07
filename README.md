@@ -15,8 +15,8 @@
 
 > Weather widget
 
-Uses GeolocationApi to fetch user coordinates. Since no external API used, location
-displayed in the widget is shown as Latitude and Longitude coordinates.
+Uses GeolocationApi to fetch user coordinates. Using `https://nominatim.openstreetmap.org` to fetch current location
+based on coordinates.
 
 Requires Geolocation support and user permissions provided to work.
 
