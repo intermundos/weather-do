@@ -8,7 +8,8 @@
 - vite dev server
 - react + typescript
 - nanostores for state management
-- sass + tailwindcss for styling
+- sass + tailwindcss for styles
+- daisyui for ui kit
 
 ### Features
 
